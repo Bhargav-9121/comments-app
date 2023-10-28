@@ -26,8 +26,74 @@
   background-color: #0ea5e9;
 }
 
+.row-lo {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
 .dp-thing {
   color: white;
   border: 0;
+  height: 32px;
+  width: 32px;
+  border-radius: 50px;
+  font-size: 18px;
+  margin-right: 10px;
 }
-/* Write your CSS here */
+
+p {
+  margin: 0;
+}
+
+.p-name {
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.p-time {
+  font-size: 15px;
+  color: silver;
+  padding-top: 5px;
+}
+
+.actual-para {
+  color: darkslategray;
+  font-size: 16px;
+  margin-left: 45px;
+}
+
+.both-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.it-is-true {
+  color: blue;
+}
+
+.it-is-false {
+  color: silver;
+}
+
+.this-spec {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 75px;
+  border: 0;
+  margin-top: 20px;
+  background-color: transparent;
+  font-size: 16px;
+}
+
+img {
+  height: 20px;
+}
+
+hr {
+  margin-bottom: 25px;
+}

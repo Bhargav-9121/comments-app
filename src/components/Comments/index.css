@@ -32,6 +32,8 @@ form {
 
 ul {
   list-style-type: none;
+  padding: 0;
+  margin-top: 25px;
 }
 
 .main-img {
@@ -43,8 +45,9 @@ h1 {
   color: #1e293b;
 }
 
-p {
+.say-some {
   color: #475569;
+  margin-bottom: 25px;
 }
 
 input {

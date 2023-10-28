@@ -79,7 +79,7 @@ class Comments extends Component {
           <form onSubmit={this.submitForm}>
             <div className="written-div">
               <h1>Comments</h1>
-              <p>Say Something about 4.0 Technologies</p>
+              <p className="say-some">Say Something about 4.0 Technologies</p>
               <input
                 value={nameInput}
                 onChange={this.nameThing}

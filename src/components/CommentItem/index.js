@@ -9,6 +9,7 @@ const Listing = props => {
   const imgUrl = isLiked
     ? 'https://assets.ccbp.in/frontend/react-js/comments-app/liked-img.png'
     : 'https://assets.ccbp.in/frontend/react-js/comments-app/like-img.png'
+  const classN = isLiked ? 'it-is-true' : 'it-is-false'
 
   const doLike = () => {
     togLike(id)
@@ -20,21 +21,36 @@ const Listing = props => {
 
   return (
     <li>
-      <button type="button" className={dpClass}>
-        {dp}
-      </button>
-      <p>{postedTime}</p>
-      <p>{name}</p>
-      <p>{para}</p>
-      <button onClick={doLike} type="button">
-        <img src={imgUrl} alt="likeThing" />
-      </button>
-      <button onClick={doDel} data-testid="delete" type="button">
-        <img
-          alt="delete"
-          src="https://assets.ccbp.in/frontend/react-js/comments-app/delete-img.png"
-        />
-      </button>
+      <div className="row-lo">
+        <button type="button" className={`dp-thing ${dpClass}`}>
+          {dp}
+        </button>
+        <p className="p-name">{name}</p>
+        <p className="p-time">{`${postedTime} ago`}</p>
+      </div>
+      <p className="actual-para">{para}</p>
+      <div className="both-btn">
+        <button
+          className={`${classN} this-spec`}
+          onClick={doLike}
+          type="button"
+        >
+          <img src={imgUrl} alt="likeThing" />
+          Like
+        </button>
+        <button
+          className="this-spec"
+          onClick={doDel}
+          data-testid="delete"
+          type="button"
+        >
+          <img
+            alt="delete"
+            src="https://assets.ccbp.in/frontend/react-js/comments-app/delete-img.png"
+          />
+        </button>
+      </div>
+      <hr />
     </li>
   )
 }
