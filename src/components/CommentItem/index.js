@@ -1,8 +1,9 @@
 import {formatDistanceToNow} from 'date-fns'
+import './index.css'
 
 const Listing = props => {
   const {val, togLike, delThing} = props
-  const {id, name, para, isLiked, time} = val
+  const {id, name, para, isLiked, time, dpClass} = val
   const postedTime = formatDistanceToNow(time)
   const dp = name[0].toUpperCase()
   const imgUrl = isLiked
@@ -19,7 +20,9 @@ const Listing = props => {
 
   return (
     <li>
-      <button type="button">{dp}</button>
+      <button type="button" className={dpClass}>
+        {dp}
+      </button>
       <p>{postedTime}</p>
       <p>{name}</p>
       <p>{para}</p>

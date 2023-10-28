@@ -74,45 +74,52 @@ class Comments extends Component {
   render() {
     const {commentsList, nameInput, paraInput} = this.state
     return (
-      <>
-        <form onSubmit={this.submitForm}>
-          <div className="written-div">
-            <h1>Comments</h1>
-            <p>Say Something about 4.0 Technologies</p>
-            <input
-              value={nameInput}
-              onChange={this.nameThing}
-              placeholder="Your Name"
+      <div className="total-thing">
+        <div className="inner-div">
+          <form onSubmit={this.submitForm}>
+            <div className="written-div">
+              <h1>Comments</h1>
+              <p>Say Something about 4.0 Technologies</p>
+              <input
+                value={nameInput}
+                onChange={this.nameThing}
+                placeholder="Your Name"
+              />
+              <textarea
+                value={paraInput}
+                onChange={this.paraThing}
+                placeholder="Your Comment"
+                rows="8"
+                cols="35"
+              />
+              <button className="sub-btn" type="submit">
+                Add Comment
+              </button>
+            </div>
+            <img
+              className="main-img"
+              alt="comments"
+              src="https://assets.ccbp.in/frontend/react-js/comments-app/comments-img.png"
             />
-            <textarea
-              value={paraInput}
-              onChange={this.paraThing}
-              placeholder="Your Comment"
-              rows="4"
-              cols="30"
-            />
-            <button type="submit">Add Comment</button>
+          </form>
+          <hr />
+          <div className="bottom-thing">
+            <p className="span-p">
+              <span>{commentsList.length}</span> Comments
+            </p>
+            <ul>
+              {commentsList.map(each => (
+                <Listing
+                  delThing={this.delThing}
+                  togLike={this.togLike}
+                  key={each.id}
+                  val={each}
+                />
+              ))}
+            </ul>
           </div>
-          <img
-            alt="comments"
-            src="https://assets.ccbp.in/frontend/react-js/comments-app/comments-img.png"
-          />
-        </form>
-        <hr />
-        <p>
-          <span>{commentsList.length}</span> Comments
-        </p>
-        <ul>
-          {commentsList.map(each => (
-            <Listing
-              delThing={this.delThing}
-              togLike={this.togLike}
-              key={each.id}
-              val={each}
-            />
-          ))}
-        </ul>
-      </>
+        </div>
+      </div>
     )
   }
 }
