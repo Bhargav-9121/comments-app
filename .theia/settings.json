@@ -1,8 +1,4 @@
 {
-    "cSpell.words": [
-        "uuidv"
-    ],
-    "cSpell.ignoreWords": [
-        "testid"
-    ]
+  "cSpell.words": ["uuidv"],
+  "cSpell.ignoreWords": ["testid"]
 }
